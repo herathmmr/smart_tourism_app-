@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.bold,
             color: Colors.black87,
           ),
-        ),
+        ), //text
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
