@@ -1,1 +1,2 @@
-int 
+stringname = "Herath"
+city = 'Colombo'
