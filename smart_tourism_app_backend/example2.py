@@ -1,2 +1,0 @@
-stringname = "Herath"
-city = 'Colombo'

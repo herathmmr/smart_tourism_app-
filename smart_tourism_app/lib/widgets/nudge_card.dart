@@ -5,7 +5,7 @@ import '../core/constants.dart';
 class NudgeCard extends StatelessWidget {
   final DestinationModel destination;
 
-  const NudgeCard({Key? key, required this.destination}) : super(key: key);
+  const NudgeCard({super.key, required this.destination});
 
   @override
   Widget build(BuildContext context) {
