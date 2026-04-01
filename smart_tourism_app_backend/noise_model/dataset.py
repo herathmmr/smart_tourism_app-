@@ -79,12 +79,25 @@ def build_dataset(manifest_csv,
 
 def _features_from_array(audio, sample_rate, duration):
     """Helper: extract MFCC features from a numpy audio array."""
-    with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as tmp:
-        sf.write(tmp.name, audio, sample_rate)
-        feats = extract_mfcc(tmp.name, sample_rate, duration)
-        os.unlink(tmp.name)
-    return feats
+    import tempfile
+    import os
+    import soundfile as sf
+    from preprocess import extract_mfcc
 
+    
+    tmp = tempfile.NamedTemporaryFile(suffix='.wav', delete=False)
+    tmp_name = tmp.name
+    tmp.close() # close the file so that sf.write can write to it on Windows
+    
+    try:
+        sf.write(tmp_name, audio, sample_rate)
+        feats = extract_mfcc(tmp_name, sample_rate, duration)
+    finally:
+        # remove the temporary file
+        if os.path.exists(tmp_name):
+            os.unlink(tmp_name)
+            
+    return feats
 
 
 # Train / Val / Test split

@@ -77,11 +77,19 @@ def classify(model,
     # Measure dB 
     db_level = measure_db(audio)
 
-    # Extract MFCC features
-    with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as tmp:
-        sf.write(tmp.name, audio, sample_rate)
-        features = extract_mfcc(tmp.name, sample_rate, duration)
-        os.unlink(tmp.name)
+    
+    # Extract MFCC features (Windows-safe way)
+    tmp = tempfile.NamedTemporaryFile(suffix='.wav', delete=False)
+    tmp_name = tmp.name
+    tmp.close() 
+
+    try:
+        sf.write(tmp_name, audio, sample_rate)
+        features = extract_mfcc(tmp_name, sample_rate, duration)
+    finally:
+        
+        if os.path.exists(tmp_name):
+            os.unlink(tmp_name)
 
     # Inference
     features_batch = np.expand_dims(features, axis=0)          # (1, 40, 173, 3)
