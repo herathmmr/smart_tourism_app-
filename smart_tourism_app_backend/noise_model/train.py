@@ -60,7 +60,7 @@ def train(splits_dir=SPLITS_DIR):
     # Load pre-built splits
     X_train, X_val, X_test, y_train, y_val, y_test = load_splits(splits_dir)
 
-    input_shape = X_train.shape[1:]   # (40, 173, 3)
+    input_shape = X_train.shape[1:]   # (40, 216, 3)
     print(f"\nInput shape : {input_shape}")
     print(f"Train size  : {X_train.shape[0]}")
     print(f"Val size    : {X_val.shape[0]}")

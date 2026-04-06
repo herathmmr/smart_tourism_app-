@@ -27,7 +27,7 @@ CONF_THRESHOLD = 0.70   # minimum confidence to trust the prediction
 
 # Load model
 
-def load_model(weights_path=WEIGHTS_PATH, input_shape=(40, 173, 3)):
+def load_model(weights_path=WEIGHTS_PATH, input_shape=(40, 216, 3)):
     """Load model architecture + weights."""
     from model import build_noise_classifier
     model = build_noise_classifier(input_shape)
@@ -92,7 +92,7 @@ def classify(model,
             os.unlink(tmp_name)
 
     # Inference
-    features_batch = np.expand_dims(features, axis=0)          # (1, 40, 173, 3)
+    features_batch = np.expand_dims(features, axis=0)          # (1, 40, 216, 3)
     probs     = model.predict(features_batch, verbose=0)[0]    # (2,)
     class_idx = int(np.argmax(probs))
     confidence = float(probs[class_idx])

@@ -179,7 +179,7 @@ def create_sample_manifest(output_csv='dataset_manifest.csv'):
         ],
         'label'     : [0, 0, 1, 1],
         'label_name': ['crowd', 'crowd', 'nature', 'nature'],
-        'duration'  : [4.0, 4.0, 4.0, 4.0],
+        'duration'  : [5.0, 5.0, 5.0, 5.0],
         'source'    : ['field', 'field', 'field', 'field'],
     }
     df = pd.DataFrame(data)

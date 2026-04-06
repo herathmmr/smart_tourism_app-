@@ -106,7 +106,7 @@ def build_noise_classifier_lite(input_shape, num_classes=2):
 # Main — print summary
 
 if __name__ == '__main__':
-    INPUT_SHAPE = (40, 173, 3)   # (n_mfcc, time_steps, channels)
+    INPUT_SHAPE = (40, 216, 3)   # (n_mfcc, time_steps, channels)
 
     print("=" * 55)
     print("Full model")

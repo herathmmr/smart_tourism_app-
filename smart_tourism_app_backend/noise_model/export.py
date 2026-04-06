@@ -9,7 +9,7 @@ from model import build_noise_classifier
 
 WEIGHTS_PATH = 'noise_model_best.h5'
 TFLITE_PATH  = 'noise_model.tflite'
-INPUT_SHAPE  = (40, 173, 3)
+INPUT_SHAPE  = (40, 216, 3)
 
 
 def export_tflite(weights_path=WEIGHTS_PATH,

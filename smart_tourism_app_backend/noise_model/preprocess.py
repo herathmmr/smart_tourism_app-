@@ -9,7 +9,7 @@ import soundfile as sf
 # Constants
 
 SAMPLE_RATE  = 22050   # Hz
-DURATION     = 4.0     # seconds
+DURATION     = 5.0     # seconds
 N_MFCC       = 40      # number of MFCC coefficients
 N_FFT        = 2048    # FFT window size
 HOP_LENGTH   = 512     # frames between windows
@@ -55,7 +55,7 @@ def extract_mfcc(file_path,
     std  = mfcc_combined.std() + 1e-8   # avoid division by zero
     mfcc_combined = (mfcc_combined - mean) / std
 
-    return mfcc_combined   # shape: (40, ~173, 3)
+    return mfcc_combined   # shape: (40, ~216, 3)
 
 
 # Audio Augmentation
