@@ -3,6 +3,7 @@
 import os
 import numpy as np
 import tensorflow as tf
+from model import build_noise_classifier_lite
 
 from model import build_noise_classifier
 
@@ -18,7 +19,7 @@ def export_tflite(weights_path=WEIGHTS_PATH,
                   quantize=True):
     
     # Rebuild model and load weights
-    model = build_noise_classifier(input_shape)
+    model = build_noise_classifier_lite(input_shape)
     model.load_weights(weights_path)
     print(f"Weights loaded from {weights_path}")
 

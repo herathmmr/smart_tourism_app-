@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import tensorflow as tf
+from model import build_noise_classifier_lite
 
 from sklearn.metrics import (
     classification_report,
@@ -25,7 +26,7 @@ CLASS_NAMES  = ['Crowd Noise', 'Nature Noise']
 def load_model(weights_path=WEIGHTS_PATH, splits_dir='data/splits'):
     X_train, _, _, _, _, _ = load_splits(splits_dir)
     input_shape = X_train.shape[1:]
-    model = build_noise_classifier(input_shape)
+    model = build_noise_classifier_lite(input_shape)
     model.load_weights(weights_path)
     print(f"Weights loaded from {weights_path}")
     return model

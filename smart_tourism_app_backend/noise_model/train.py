@@ -1,26 +1,21 @@
-
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
 from dataset import load_splits
-from model   import build_noise_classifier
+from model import build_noise_classifier_lite
 
 
 # Config
-
 SPLITS_DIR   = 'data/splits'
 WEIGHTS_PATH = 'noise_model_best.h5'
 EPOCHS       = 100
 BATCH_SIZE   = 32
-LEARNING_RATE = 1e-3
-
+LEARNING_RATE = 1e-4
 
 
 # Callbacks
-
 def get_callbacks(weights_path=WEIGHTS_PATH):
     return [
         # Stop training when val_loss stops improving
@@ -53,9 +48,7 @@ def get_callbacks(weights_path=WEIGHTS_PATH):
     ]
 
 
-
 # Training
-
 def train(splits_dir=SPLITS_DIR):
     # Load pre-built splits
     X_train, X_val, X_test, y_train, y_val, y_test = load_splits(splits_dir)
@@ -67,7 +60,7 @@ def train(splits_dir=SPLITS_DIR):
     print(f"Test size   : {X_test.shape[0]}\n")
 
     # Build model
-    model = build_noise_classifier(input_shape)
+    model = build_noise_classifier_lite(input_shape)
 
     # Compile
     model.compile(
@@ -101,9 +94,7 @@ def train(splits_dir=SPLITS_DIR):
     return model, history
 
 
-
 # Learning curve plot
-
 def plot_history(history):
     fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 
@@ -131,8 +122,6 @@ def plot_history(history):
     plt.show()
 
 
-
 # Main
-
 if __name__ == '__main__':
     train()
