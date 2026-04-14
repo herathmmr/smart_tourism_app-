@@ -29,9 +29,7 @@ CONF_THRESHOLD = 0.70   # minimum confidence to trust the prediction
 
 def load_model(weights_path=WEIGHTS_PATH, input_shape=(40, 216, 3)):
     """Load model architecture + weights."""
-    from model import build_noise_classifier
-    model = build_noise_classifier(input_shape)
-    model.load_weights(weights_path)
+    model = tf.keras.models.load_model(weights_path)
     return model
 
 
