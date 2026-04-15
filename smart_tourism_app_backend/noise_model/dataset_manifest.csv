@@ -9,6 +9,10 @@ data/crowd/1-115920-B-22.wav,0,crowd
 data/crowd/1-115921-A-22.wav,0,crowd
 data/crowd/1-116765-A-41.wav,0,crowd
 data/crowd/3-243726-A-43.wav,0,crowd
+data/crowd/4-201988-A-44.wav,0,crowd
+data/crowd/4-204119-A-39.wav,0,crowd
+data/crowd/4-204123-A-39.wav,0,crowd
+data/crowd/4-204684-A-37.wav,0,crowd
 data/crowd/4-250869-B-2.wav,0,crowd
 data/crowd/4-250869-C-2.wav,0,crowd
 data/crowd/4-251645-A-49.wav,0,crowd
@@ -23,6 +27,12 @@ data/crowd/5-103416-A-2.wav,0,crowd
 data/crowd/5-117118-A-42.wav,0,crowd
 data/crowd/5-117120-A-42.wav,0,crowd
 data/crowd/5-117122-A-42.wav,0,crowd
+data/crowd/5-133989-B-42.wav,0,crowd
+data/crowd/5-156999-E-19.wav,0,crowd
+data/crowd/5-160551-A-42.wav,0,crowd
+data/crowd/5-160614-B-48.wav,0,crowd
+data/crowd/5-160614-D-48.wav,0,crowd
+data/crowd/5-160614-G-48.wav,0,crowd
 data/crowd/5-170338-A-41.wav,0,crowd
 data/crowd/5-170338-B-41.wav,0,crowd
 data/crowd/5-171118-A-26.wav,0,crowd
@@ -96,6 +106,9 @@ data/crowd/5-263775-B-26.wav,0,crowd
 data/crowd/5-263902-A-36.wav,0,crowd
 data/nature/1-110389-A-0.wav,1,nature
 data/nature/3-98771-A-18.wav,1,nature
+data/nature/4-198962-B-25.wav,1,nature
+data/nature/4-198965-A-38.wav,1,nature
+data/nature/4-199261-A-0.wav,1,nature
 data/nature/4-250864-A-8.wav,1,nature
 data/nature/4-253649-A-6.wav,1,nature
 data/nature/4-261068-A-30.wav,1,nature
@@ -113,6 +126,13 @@ data/nature/5-103420-A-2.wav,1,nature
 data/nature/5-103421-A-2.wav,1,nature
 data/nature/5-103422-A-2.wav,1,nature
 data/nature/5-117250-A-2.wav,1,nature
+data/nature/5-156999-A-19.wav,1,nature
+data/nature/5-156999-B-19.wav,1,nature
+data/nature/5-156999-D-19.wav,1,nature
+data/nature/5-157204-A-16.wav,1,nature
+data/nature/5-157204-B-16.wav,1,nature
+data/nature/5-160614-A-48.wav,1,nature
+data/nature/5-161270-A-33.wav,1,nature
 data/nature/5-161270-B-33.wav,1,nature
 data/nature/5-169983-A-5.wav,1,nature
 data/nature/5-172639-A-5.wav,1,nature
